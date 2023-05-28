@@ -1,0 +1,13 @@
+type Query{
+    RadarsList:[Radar]
+}
+
+type Radar{
+    id:Float,
+    vitessMax:Int,
+    dateNaissance:String
+    Longitude: String
+    Latitude: String
+
+
+}

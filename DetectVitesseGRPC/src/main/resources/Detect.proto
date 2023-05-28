@@ -1,0 +1,15 @@
+syntax="proto3";
+option java_package="org.sdia.Stubs";
+service DetectService{
+  rpc envoyer(stream DetectVitesse) returns(stream Response);
+
+}
+message DetectVitesse{
+  string vehiculeMatriculation=1;
+  double vehiculeVitesse=2;
+  double IdRadar=3;
+}
+
+message Response{
+  int32 response=1;
+}

@@ -1,0 +1,22 @@
+syntax="proto3";
+option java_package="org.sdia.immatriculation.GRPC_Service.stubs";
+service ImmatriculationService{
+  // déclarer les methodes
+  rpc affichagePro(proprietaire) returns(proprietaire);// unary model
+  rpc affichageVehi(vehicule) returns(vehicule);// unary model
+
+}
+message proprietaire{
+   double idp=1;
+   string nom=2;
+   string dateNaissance=3;
+}
+
+message vehicule{
+  double idv=1;
+  string numMatricule=2;
+  string marque=3;
+  int32 puissanceFiscal=4;
+  string modele=5;
+  proprietaire idProprietaire=6;
+}
